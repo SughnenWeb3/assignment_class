@@ -5,7 +5,7 @@ class Student:
         self.phone_number: int = phone_number
         self.courses: list[str] = []
 
-    def enroll(self, course: str) -> None:
+    def enroll(self, course: str):
         self.courses.append(course)
         print(f"{self.name} enrolled in {course}")
 
@@ -37,7 +37,7 @@ class ELearningSystem:
         else:
             print(f"{name} is not registered on {self.platform_name}")
 
-    def show_all_students(self) -> None:
+    def show_all_students(self):
         print(f"\n--- Students on {self.platform_name} ---")
         for student in self.students.values():
             print(f"Name: {student.name}, Email: {student.email}, Phone: {student.phone_number}")
@@ -46,11 +46,11 @@ class ELearningSystem:
 
 system = ELearningSystem("BlockFuse Academy")
 
-system.register_student("Alice", "alice@example.com", 123456789)
-system.register_student("Bob", "bob@example.com", 987654321)
+system.register_student("Sue", "alice@example.com", 123456789)
+system.register_student("Vivi", "bob@example.com", 987654321)
 
-system.enroll_student_in_course("Alice", "Python Basics")
-system.enroll_student_in_course("Alice", "AI for Beginners")
-system.enroll_student_in_course("Bob", "Web Development")
+system.enroll_student_in_course("Malik", "Python Basics")
+system.enroll_student_in_course("Sughnen", "AI for Beginners")
+system.enroll_student_in_course("Andrew", "Web Development")
 
 system.show_all_students()
